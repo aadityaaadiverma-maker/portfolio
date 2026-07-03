@@ -271,42 +271,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contact-form');
     const formStatus = document.getElementById('form-status');
     
-    // Default EmailJS credentials (fallback if .env cannot be fetched/parsed)
-    let EMAILJS_PUBLIC_KEY = 'HtOMoyXBpJ2IzsJOn';
-    let EMAILJS_SERVICE_ID = 'service_rsq94vn';
-    let EMAILJS_TEMPLATE_ID = 'template_sloqu3g';
+    // EmailJS credentials
+    const EMAILJS_PUBLIC_KEY = 'HtOMoyXBpJ2IzsJOn';
+    const EMAILJS_SERVICE_ID = 'service_rsq94vn';
+    const EMAILJS_TEMPLATE_ID = 'template_sloqu3g';
 
-    // Function to load and parse .env file dynamically at runtime
-    async function loadEnv() {
-        try {
-            const response = await fetch('.env');
-            if (response.ok) {
-                const text = await response.text();
-                const lines = text.split(/\r?\n/);
-                lines.forEach(line => {
-                    const trimmed = line.trim();
-                    if (!trimmed || trimmed.startsWith('#')) return;
-                    const equalSignIndex = trimmed.indexOf('=');
-                    if (equalSignIndex !== -1) {
-                        const key = trimmed.slice(0, equalSignIndex).trim();
-                        let value = trimmed.slice(equalSignIndex + 1).trim();
-                        // Strip quotes if present
-                        if ((value.startsWith("'") && value.endsWith("'")) || (value.startsWith('"') && value.endsWith('"'))) {
-                            value = value.slice(1, -1);
-                        }
-                        if (key === 'EMAILJS_PUBLIC_KEY') EMAILJS_PUBLIC_KEY = value;
-                        else if (key === 'EMAILJS_SERVICE_ID') EMAILJS_SERVICE_ID = value;
-                        else if (key === 'EMAILJS_TEMPLATE_ID') EMAILJS_TEMPLATE_ID = value;
-                    }
-                });
-            }
-        } catch (error) {
-            console.warn("Could not fetch .env file, using default values:", error);
-        }
-    }
-
-    // Call loadEnv immediately
-    loadEnv();
 
     if (contactForm && formStatus) {
         contactForm.addEventListener('submit', (e) => {
@@ -338,10 +307,11 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             const templateParams = {
-                from_name: name,
-                from_email: email,
-                message: msg
-            };
+        from_name: name,
+        reply_to: email,
+        from_email: email,
+        message: msg
+};
 
             emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
                 .then(() => {
