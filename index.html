@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Optimization -->
+    <title>Aaditya Verma | CS Engineer & AI Enthusiast Portfolio</title>
+    <meta name="description" content="Portfolio of Aaditya Verma, an aspiring Computer Science Engineer specializing in AI, ML, Python, and SQL, with expertise in Asset Management Systems and Creative Magazine Design.">
+    <meta name="keywords" content="Aaditya Verma, Computer Science Engineer, AI ML Portfolio, Python Developer, SQL Database Developer, Noida India, Genesis Global School">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Background Design Elements -->
+    <div class="grid-overlay"></div>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="container nav-container">
+            <a href="#home" class="logo" id="nav-logo">
+                <span>A</span>aditya<span class="logo-dot"></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#resume">Timeline</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#chess">Chess</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="resume.pdf" class="resume-btn" download>Get Resume</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Menu">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="badge">
+                    <span class="badge-dot"></span> Available for Projects
+                </div>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">Aaditya Verma</span>
+                </h1>
+                <div class="hero-headline">
+                    <span id="typing-text"></span>
+                </div>
+                <p class="hero-desc">
+                    Aspiring Computer Science Engineer doing B.Tech at Amity University. I specialize in backend development, relational database systems, and building intelligent AI Agents.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        View Projects
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                            <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+                <div class="hero-socials">
+                    <span>Follow Me:</span>
+                    <a href="https://github.com/aadityaaadiverma-maker" class="social-icon" target="_blank" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/aaditya-verma-ba75681b7" class="social-icon" target="_blank" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:aadityaaadiverma@gmail.com" class="social-icon" aria-label="Email">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="avatar-glow">
+                    <div class="avatar-container">
+                        <img src="profile.jpg" alt="Aaditya Verma">
+                    </div>
+                </div>
+                <!-- Interactive Floating Widgets -->
+                <div class="floating-widget widget-1">
+                    <div class="widget-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/>
+                        </svg>
+                    </div>
+                    <div class="widget-text">
+                        <h5>AIR 1025</h5>
+                        <p>Maths Challenge</p>
+                    </div>
+                </div>
+                <div class="floating-widget widget-2">
+                    <div class="widget-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 22c5.52 0 10-4.48 10-10S17.52 2 12 2 2 6.48 2 12s4.48 10 10 10zm1-15h-2v6h2V7zm0 8h-2v2h2v-2z"/>
+                        </svg>
+                    </div>
+                    <div class="widget-text">
+                        <h5>AI & ML</h5>
+                        <p>Specialization</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="reveal">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <span class="section-subtitle">Introduction</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-banner-wrapper">
+                    <img src="banner.png" alt="Aaditya's LinkedIn Banner" class="about-banner-img">
+                </div>
+                
+                <div class="about-text-content">
+                    <p>
+                        I'm a dedicated and analytical <strong>Computer Science Engineer</strong> pursuing a B.Tech degree at Amity University Noida. With a deep passion for <strong>Artificial Intelligence</strong>, machine learning, and database engineering, I thrive on building tools and automation systems that simplify operations.
+                    </p>
+                    <p>
+                        Beyond software engineering, I have strong creative expertise in <strong>Magazine Layout Design</strong>. Over my secondary school journey, I designed visual systems and publications for school magazines, including serving as the core designer for <em>Silicon Stories</em>. This blend of visual communication and coding helps me design elegant and functional user experiences.
+                    </p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <div class="stat-num">AIR 1025</div>
+                            <div class="stat-title">Ramanujan Maths</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-num">Top 10</div>
+                            <div class="stat-title">Lynkube Summit</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-num">81.25%</div>
+                            <div class="stat-title">High School GPA</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-num">5+</div>
+                            <div class="stat-title">Certifications</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="reveal">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <span class="section-subtitle">My Toolbox</span>
+                <h2 class="section-title">Skills & Expertise</h2>
+            </div>
+            
+            <div class="skills-container">
+                <div class="skills-tabs">
+                    <button class="tab-btn active" data-filter="all">All Skills</button>
+                    <button class="tab-btn" data-filter="ai">AI & ML</button>
+                    <button class="tab-btn" data-filter="dev">Development & Databases</button>
+                    <button class="tab-btn" data-filter="creative">Design & Creative</button>
+                </div>
+                
+                <div class="skills-grid">
+                    <!-- Python Card -->
+                    <div class="skill-card" data-category="dev">
+                        <div class="skill-header">
+                            <div class="skill-icon-box">
+                                <svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2zm1 14.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5zM12 5.5A2.5 2.5 0 0 1 14.5 8c0 1.28-1.5 2.25-1.5 3h-2c0-1.5 1.5-2.25 1.5-3A1.5 1.5 0 0 0 11 6.5a1.5 1.5 0 0 0-1.5 1.5H7.5A3.5 3.5 0 0 1 11 4.5a3.5 3.5 0 0 1 3.5 3.5c0 1.5-1.5 2.5-1.5 3.5V13h-2v-1.5c0-.85.73-1.6 1.4-2 .46-.28.6-.68.6-1A1.5 1.5 0 0 0 11.5 7"/></svg>
+                            </div>
+                            <span class="skill-badge">Core</span>
+                        </div>
+                        <h4 class="skill-name">Python Development</h4>
+                        <p class="skill-desc">Writing clean, object-oriented code, automation scripts, and backend servers.</p>
+                    </div>
+
+                    <!-- MySQL Card -->
+                    <div class="skill-card" data-category="dev">
+                        <div class="skill-header">
+                            <div class="skill-icon-box">
+                                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 4.02 2 6.5v11c0 2.48 4.48 4.5 10 4.5s10-2.02 10-4.5v-11C22 4.02 17.52 2 12 2zm0 2c3.87 0 8 1.13 8 2.5S15.87 9 12 9s-8-1.13-8-2.5S8.13 4 12 4z"/></svg>
+                            </div>
+                            <span class="skill-badge">Advanced</span>
+                        </div>
+                        <h4 class="skill-name">SQL & Relational DB</h4>
+                        <p class="skill-desc">Relational database design, query optimization, indexing, and CRUD system logic.</p>
+                    </div>
+
+                    <!-- AI & Agents Card -->
+                    <div class="skill-card" data-category="ai">
+                        <div class="skill-header">
+                            <div class="skill-icon-box">
+                                <svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.17 19.58 10.53 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9z"/></svg>
+                            </div>
+                            <span class="skill-badge">Specialist</span>
+                        </div>
+                        <h4 class="skill-name">AI Agents & LLMs</h4>
+                        <p class="skill-desc">Working with Claude API, Gemini, prompt engineering, RAG, and agentic workflows.</p>
+                    </div>
+
+                    <!-- ML Card -->
+                    <div class="skill-card" data-category="ai">
+                        <div class="skill-header">
+                            <div class="skill-icon-box">
+                                <svg viewBox="0 0 24 24"><path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 3c-3.87 0-7 3.13-7 7s3.13 7 7 7 7-3.13 7-7-3.13-7-7-7z"/></svg>
+                            </div>
+                            <span class="skill-badge">Intermediate</span>
+                        </div>
+                        <h4 class="skill-name">Machine Learning</h4>
+                        <p class="skill-desc">Basic algorithmic structures, data modeling, analysis, and data preparation.</p>
+                    </div>
+
+                    <!-- Layout Design Card -->
+                    <div class="skill-card" data-category="creative">
+                        <div class="skill-header">
+                            <div class="skill-icon-box">
+                                <svg viewBox="0 0 24 24"><path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12h2c0 4.41 3.59 8 8 8s8-3.59 8-8-3.59-8-8-8v2c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H2c0 5.52 4.48 10 10 10z"/></svg>
+                            </div>
+                            <span class="skill-badge">Advanced</span>
+                        </div>
+                        <h4 class="skill-name">Magazine Layout</h4>
+                        <p class="skill-desc">Creating publication layouts, visual identity, graphics, and asset design.</p>
+                    </div>
+
+                    <!-- Visual Comm Card -->
+                    <div class="skill-card" data-category="creative">
+                        <div class="skill-header">
+                            <div class="skill-icon-box">
+                                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                            </div>
+                            <span class="skill-badge">Core</span>
+                        </div>
+                        <h4 class="skill-name">Visual Comm</h4>
+                        <p class="skill-desc">Applying color theories, design grids, fonts pairings, and modern aesthetics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Education (Timeline) Section -->
+    <section id="resume" class="reveal">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <span class="section-subtitle">Academic & Professional Journey</span>
+                <h2 class="section-title">Timeline</h2>
+            </div>
+            
+            <div class="timeline-toggle-wrapper">
+                <div class="timeline-toggle-btn">
+                    <button class="timeline-btn active" id="btn-experience">Experience</button>
+                    <button class="timeline-btn" id="btn-education">Education</button>
+                </div>
+            </div>
+            
+            <div class="timeline">
+                <!-- Genesis Experience -->
+                <div class="timeline-item" data-type="experience">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-title">
+                                <h3>Magazine Designer</h3>
+                                <div class="timeline-org">Genesis Global School - Silicon Stories</div>
+                            </div>
+                            <span class="timeline-date">Apr '24 - Apr '26</span>
+                        </div>
+                        <div class="timeline-body">
+                            <ul>
+                                <li>Designed the visual layout and graphics for <em>Silicon Stories</em>, the school's Computer Science magazine.</li>
+                                <li>Collaborated with faculty members and student contributors to publish technical content.</li>
+                                <li>Applied principles of visual hierarchy and structural alignment for clean presentations.</li>
+                                <li>Coordinated with editorial team to hit publishing deadlines while preserving branding guidelines.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GeniusHub Experience -->
+                <div class="timeline-item" data-type="experience">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-title">
+                                <h3>Finance Management Intern</h3>
+                                <div class="timeline-org">GeniusHub</div>
+                            </div>
+                            <span class="timeline-date">Dec '24 - Jan '25</span>
+                        </div>
+                        <div class="timeline-body">
+                            <ul>
+                                <li>Completed structured assignments focusing on corporate budgeting, resource allocation, and planning.</li>
+                                <li>Gained key insights into business decision-making matrices and asset management dynamics.</li>
+                                <li>Collaborated with senior financial mentors on analytical assessments.</li>
+                                <li>Developed business communications, organizational skills, and financial records reporting.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lynkube Experience -->
+                <div class="timeline-item" data-type="experience">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-title">
+                                <h3>Top Intern</h3>
+                                <div class="timeline-org">Lynkube Young Leaders Summit (LYLS)</div>
+                            </div>
+                            <span class="timeline-date">Oct '24 - Dec '24</span>
+                        </div>
+                        <div class="timeline-body">
+                            <ul>
+                                <li>Ranked among the Top 10 Outstanding Interns at the summit.</li>
+                                <li>Led group projects focusing on strategic thinking, teamwork, and global issues resolving.</li>
+                                <li>Participated in specialized programs for leadership, active decision-making, and critical thinking.</li>
+                                <li>Collaborated on project deadlines using modern workspace management tools.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Amity University Education -->
+                <div class="timeline-item" data-type="education">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-title">
+                                <h3>B.Tech in Computer Science (AI & ML)</h3>
+                                <div class="timeline-org">Amity University, Noida</div>
+                            </div>
+                            <span class="timeline-date">Ongoing</span>
+                        </div>
+                        <div class="timeline-body">
+                            <ul>
+                                <li>Specialized core focus on Machine Learning models, Deep Learning algorithms, and Neural Networks.</li>
+                                <li>Focusing on scalable backend architectures, advanced database structures, and prompt engineering methods.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- High School Education -->
+                <div class="timeline-item" data-type="education">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-title">
+                                <h3>High School Degree (PCM with CS)</h3>
+                                <div class="timeline-org">Genesis Global School, Noida</div>
+                            </div>
+                            <span class="timeline-date">2012 - 2026</span>
+                        </div>
+                        <div class="timeline-body">
+                            <ul>
+                                <li><strong>Subjects:</strong> Physics, Chemistry, Mathematics, and Computer Science.</li>
+                                <li><strong>Academic Grade achieved:</strong> 81.25%.</li>
+                                <li>Active participant in maths challenges, Model United Nations, chess events, and magazine designs.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="reveal">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <span class="section-subtitle">Showcase</span>
+                <h2 class="section-title">Featured Project</h2>
+            </div>
+            
+            <div class="featured-project">
+                <!-- Interactive database mockup visual representation -->
+                <div class="project-visual">
+                    <div class="project-db-schema">
+                        <div class="schema-table">
+                            <div class="table-header">
+                                <span>USERS TABLE</span>
+                                <span style="font-size: 0.7rem; color: #10b981;">Active</span>
+                            </div>
+                            <div class="table-fields">
+                                <div><span class="field-pk">id</span> <span>INT (PK)</span></div>
+                                <div><span>username</span> <span>VARCHAR</span></div>
+                                <div><span>password_hash</span> <span>VARCHAR</span></div>
+                                <div><span>role</span> <span>ENUM</span></div>
+                            </div>
+                        </div>
+                        <div class="schema-table">
+                            <div class="table-header">
+                                <span>ASSETS TABLE</span>
+                                <span style="font-size: 0.7rem; color: #38bdf8;">Linked</span>
+                            </div>
+                            <div class="table-fields">
+                                <div><span class="field-pk">asset_id</span> <span>INT (PK)</span></div>
+                                <div><span>asset_name</span> <span>VARCHAR</span></div>
+                                <div><span>serial_no</span> <span>VARCHAR</span></div>
+                                <div><span>status</span> <span>VARCHAR</span></div>
+                                <div><span class="field-fk">assigned_to</span> <span>INT (FK)</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-glow"></div>
+                </div>
+                
+                <div class="project-info">
+                    <span class="project-meta-badge">Python + MySQL CRUD Application</span>
+                    <h3 class="project-title">Asset Management System</h3>
+                    <p class="project-desc">
+                        A robust software system built for educational systems to register, assign, track, and manage physical infrastructure assets. Engineered custom SQL schemas utilizing entity relationship mappings to enforce database constraints.
+                    </p>
+                    <div class="project-features">
+                        <div class="project-feature-item">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            <span>Secure User Authentication</span>
+                        </div>
+                        <div class="project-feature-item">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            <span>Asset Inventory Logs</span>
+                        </div>
+                        <div class="project-feature-item">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            <span>Full CRUD Operations</span>
+                        </div>
+                        <div class="project-feature-item">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            <span>Optimized SQL Queries</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">Database Design</span>
+                    </div>
+                    
+                    <div class="project-links">
+                        <a href="https://github.com/aadityaaadiverma-maker/asset-management-system" class="btn btn-primary" target="_blank">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                            </svg>
+                            GitHub Repository
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Honors Section -->
+    <section class="reveal">
+        <div class="container grid-two-columns">
+            
+            <!-- Certifications -->
+            <div class="certifications-section">
+                <h3>
+                    <span class="section-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                        </svg>
+                    </span>
+                    Certifications
+                </h3>
+                <div class="certs-grid">
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2-1.1 0-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
+                        </div>
+                        <div class="cert-info">
+                            <h4>Gen AI: Navigating the Landscape</h4>
+                            <p>Generative Artificial Intelligence Concepts & Architectures</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2-1.1 0-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
+                        </div>
+                        <div class="cert-info">
+                            <h4>Claude Code 101</h4>
+                            <p>Agentic Workflows and Interactive Programming models</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2-1.1 0-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
+                        </div>
+                        <div class="cert-info">
+                            <h4>Python Development</h4>
+                            <p>Core structures, systems design, and backend scripts</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2-1.1 0-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
+                        </div>
+                        <div class="cert-info">
+                            <h4>Game Programming</h4>
+                            <p>edX Verified Certificate - From Code to Creation: Mastering Game Programming</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Honors & Awards -->
+            <div class="honors-section">
+                <h3>
+                    <span class="section-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                        </svg>
+                    </span>
+                    Honors & Awards
+                </h3>
+                <div class="honors-list">
+                    <div class="honor-card">
+                        <div class="honor-header">
+                            <span class="honor-badge">National</span>
+                            <span style="font-size: 0.8rem; color: var(--text-muted);">AIR 1025</span>
+                        </div>
+                        <h4 class="honor-title">Ramanujan National Maths Challenge</h4>
+                        <p class="honor-desc">Conducted by the All India Council for Technical Skill Development (AICTSD).</p>
+                    </div>
+                    <div class="honor-card">
+                        <div class="honor-header">
+                            <span class="honor-badge">Leadership</span>
+                            <span style="font-size: 0.8rem; color: var(--text-muted);">Top 10</span>
+                        </div>
+                        <h4 class="honor-title">Lynkube Young Leaders Summit</h4>
+                        <p class="honor-desc">Selected as one of the Top 10 Outstanding Interns during the national summit.</p>
+                    </div>
+                    <div class="honor-card">
+                        <div class="honor-header">
+                            <span class="honor-badge">Creative</span>
+                            <span style="font-size: 0.8rem; color: var(--text-muted);">1st Place</span>
+                        </div>
+                        <h4 class="honor-title">Earth Day Newsletter Design</h4>
+                        <p class="honor-desc">Won first prize for layout, graphic systems, and creative copywriting designs.</p>
+                    </div>
+                    <div class="honor-card">
+                        <div class="honor-header">
+                            <span class="honor-badge">Sports</span>
+                            <span style="font-size: 0.8rem; color: var(--text-muted);">State Merit</span>
+                        </div>
+                        <h4 class="honor-title">UP State Rating Chess (U-17)</h4>
+                        <p class="honor-desc">Recognized and awarded a Certificate of Merit at the State rating chess tournament.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chess Easter Egg Section -->
+    <section id="chess" class="reveal">
+        <div class="container">
+            <div class="chess-widget-container">
+                <div class="chess-widget-info">
+                    <span class="badge" style="background: rgba(168, 85, 247, 0.1); border-color: rgba(168, 85, 247, 0.2); color: var(--accent);">
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2-1.1 0-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/>
+                        </svg>
+                        Chess Easter Egg
+                    </span>
+                    <h2 class="chess-widget-title">
+                        Play a Quick Move
+                    </h2>
+                    <p class="chess-status-text" id="chess-status">
+                        White to play: Move White Rook (♖) to deliver checkmate!
+                    </p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">
+                        Aaditya holds a State Rating Chess Certificate of Merit. Play the checkmate move on this interactive board to test your tactical skills!
+                    </p>
+                    <div class="chess-controls">
+                        <button class="btn btn-secondary" id="chess-reset-btn" style="padding: 0.6rem 1.2rem; font-size: 0.9rem;">
+                            Reset Board
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="chess-board-wrapper">
+                    <div class="chess-board" id="chess-board">
+                        <!-- Loaded by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="reveal">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <span class="section-subtitle">Get in Touch</span>
+                <h2 class="section-title">Contact</h2>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info-column">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email Me</h4>
+                            <p><a href="mailto:aadityaaadiverma@gmail.com">aadityaaadiverma@gmail.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Call Me</h4>
+                            <p><a href="tel:+917042099708">+91 70420 99708</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Sector 78, Noida, Uttar Pradesh, India</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Messaging form -->
+                <div class="contact-form-card">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label class="form-label" for="form-name">Name</label>
+                            <input class="form-input" type="text" id="form-name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="form-email">Email Address</label>
+                            <input class="form-input" type="email" id="form-email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="form-message">Message</label>
+                            <textarea class="form-textarea" id="form-message" placeholder="Hello Aaditya, I would love to..." required></textarea>
+                        </div>
+                        <p class="form-status" id="form-status"></p>
+                        <button class="btn btn-primary" type="submit" style="width: 100%; justify-content: center;">
+                            Send Message
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container footer-content">
+            <a href="#home" class="logo">
+                <span>A</span>aditya<span class="logo-dot"></span>
+            </a>
+            <ul class="footer-nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#resume">Timeline</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#chess">Chess</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <p class="footer-copy">
+                &copy; 2026 Aaditya Verma. All rights reserved. Designed with custom Vanilla CSS & JS.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="scroll-top" id="scroll-top-btn" aria-label="Back to Top">
+        <svg viewBox="0 0 24 24">
+            <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
+        </svg>
+    </div>
+
+    <!-- Main JavaScript Logic -->
+    <script src="script.js"></script>
+</body>
+</html>
