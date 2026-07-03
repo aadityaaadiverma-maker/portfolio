@@ -1468,6 +1468,11 @@ section {
     color: #ef4444;
 }
 
+.form-status.info {
+    display: block;
+    color: var(--secondary);
+}
+
 /* Footer Section */
 footer {
     border-top: 1px solid var(--border-color);

@@ -271,6 +271,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contact-form');
     const formStatus = document.getElementById('form-status');
     
+    // EmailJS Configuration
+    // TODO: Replace these placeholders with your actual EmailJS credentials
+    const EMAILJS_PUBLIC_KEY = 'HtOMoyXBpJ2IzsJOn';
+    const EMAILJS_SERVICE_ID = 'service_rsq94vn';
+    const EMAILJS_TEMPLATE_ID = 'template_sloqu3g';
+
     if (contactForm && formStatus) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -285,15 +291,38 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
             
-            // Mock submission success
-            formStatus.textContent = "Connecting via Mailto/Mocking...";
-            formStatus.className = "form-status";
+            // Check if user has set up their credentials
+            if (EMAILJS_PUBLIC_KEY === 'HtOMoyXBpJ2IzsJOn') {
+                formStatus.textContent = "Configuration error: EmailJS keys are not set up yet.";
+                formStatus.className = "form-status error";
+                return;
+            }
             
-            setTimeout(() => {
-                formStatus.textContent = `Thank you, ${name}! Your message has been sent successfully. Aaditya will get back to you shortly.`;
-                formStatus.className = "form-status success";
-                contactForm.reset();
-            }, 1000);
+            formStatus.textContent = "Sending message...";
+            formStatus.className = "form-status info";
+            
+            // Initialize EmailJS
+            emailjs.init({
+                publicKey: 'HtOMoyXBpJ2IzsJOn',
+            });
+
+            const templateParams = {
+                from_name: name,
+                from_email: email,
+                message: msg
+            };
+
+            emailjs.send('service_rsq94vn', template_sloqu3g, templateParams)
+                .then(() => {
+                    formStatus.textContent = `Thank you, ${name}! Your message has been sent successfully.`;
+                    formStatus.className = "form-status success";
+                    contactForm.reset();
+                })
+                .catch((error) => {
+                    console.error("EmailJS Error:", error);
+                    formStatus.textContent = "Failed to send message. Please check connection or try again later.";
+                    formStatus.className = "form-status error";
+                });
         });
     }
 
